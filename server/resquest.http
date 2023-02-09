@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "santaryot",
+    "password": "okbayby"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "santaryot2",
+    "password": "okbayby"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFmMDY1ZjUxMGE1OWZjYzA3YjdiYzAiLCJpYXQiOjE2Mzg5MzE3ODV9.aHY0vZq-pNhxZWzdfJkb7QpXnvl7Do4xEOcG_LsFQzE
+
+{
+    "title": "this is santaryot2",
+    "description": "day la posts cua santaryo2t",
+    "url": "google2.com",
+    "status": "LEARNING"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFmMDVmZDUxMGE1OWZjYzA3YjdiYmMiLCJpYXQiOjE2Mzg4Njg1ODZ9.wiZ5tMSjGGj8c73Z1Fm2Qg65XhVLKdhkx2KvfAuzkes
+
+###
+
+PUT http://localhost:5000/api/posts/61af06a5510a59fcc07b7bc5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFmMDVmZDUxMGE1OWZjYzA3YjdiYmMiLCJpYXQiOjE2Mzg4NjIxMDN9.rZATe7ikPUVWGY99sqEgUMUuPNETMul1iVoCSfiH6fw
+
+{
+    "title": "this is santaryot updated",
+    "description": "updataed",
+    "url": "vue.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/61af06a5510a59fcc07b7bc5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFmMDVmZDUxMGE1OWZjYzA3YjdiYmMiLCJpYXQiOjE2Mzg5MjYzNTl9.SgE00u9lVo4jQJIFLlkYUH1LWM7J_MFLTQhyPu7Uy-0
